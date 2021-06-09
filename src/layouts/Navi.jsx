@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 import { Menu, Container } from 'semantic-ui-react'
 import CartSummary from './CartSummary'
 import SignedIn from './SignedIn'
@@ -7,16 +8,16 @@ import SignedOut from './SignedOut'
 export default function Navi() {
 
     const [isAuthenticated, setIsAuthenticated] = useState(true)
+    const history = useHistory()
 
     function handleSignOut() {
         setIsAuthenticated(false)
+        history.push("/")
     }
 
     function handleSignIn() {
         setIsAuthenticated(true)
     }
-
-
 
     return (
         <div>
