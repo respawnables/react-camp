@@ -25,11 +25,7 @@ export default function ProductList() {
                 <Table.Body>
                     {products.map((product) => (
                         <Table.Row key={product.id}>
-                            <Table.Cell>{product.productName}</Table.Cell>
-                            <Table.Cell>{product.unitPrice}</Table.Cell>
-                            <Table.Cell>{product.unitsInStock}</Table.Cell>
-                            <Table.Cell>{product.quantityPerUnit}</Table.Cell>
-                            <Table.Cell>{product.category.categoryName}</Table.Cell>
+                            <Table.Cell>{product.attributes.email}</Table.Cell>
                         </Table.Row>
                     ))}
                 </Table.Body>
